@@ -29,6 +29,7 @@ export default function RootLayout() {
             <Stack.Screen name="e-service" options={{ headerShown: false }} />
             <Stack.Screen name="holding-application" options={{ headerShown: false }} />
             <Stack.Screen name="warish-application" options={{ headerShown: false }} />
+            <Stack.Screen name="trade-license-application" options={{ headerShown: false }} />
             <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
           </Stack>
         </View>
