@@ -11,7 +11,7 @@ interface ServiceItem {
 
 const SERVICES: ServiceItem[] = [
   { icon: 'home', label: 'হোল্ডিং আবেদন', route: '/holding-application' },
-  { icon: 'groups', label: 'ওয়ারিশ সনদ আবেদন' },
+  { icon: 'groups', label: 'ওয়ারিশ সনদ আবেদন', route: '/warish-application' },
   { icon: 'brightness-7', label: 'ট্রেড লাইসেন্স আবেদন' },
   { icon: 'brightness-5', label: 'নাগরিক সনদপত্র আবেদন' },
 ];
