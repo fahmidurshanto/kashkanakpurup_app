@@ -30,6 +30,7 @@ export default function RootLayout() {
             <Stack.Screen name="holding-application" options={{ headerShown: false }} />
             <Stack.Screen name="warish-application" options={{ headerShown: false }} />
             <Stack.Screen name="trade-license-application" options={{ headerShown: false }} />
+            <Stack.Screen name="citizen-certificate-application" options={{ headerShown: false }} />
             <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
           </Stack>
         </View>

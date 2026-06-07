@@ -13,7 +13,7 @@ const SERVICES: ServiceItem[] = [
   { icon: 'home', label: 'হোল্ডিং আবেদন', route: '/holding-application' },
   { icon: 'groups', label: 'ওয়ারিশ সনদ আবেদন', route: '/warish-application' },
   { icon: 'brightness-7', label: 'ট্রেড লাইসেন্স আবেদন', route: '/trade-license-application' },
-  { icon: 'brightness-5', label: 'নাগরিক সনদপত্র আবেদন' },
+  { icon: 'brightness-5', label: 'নাগরিক সনদপত্র আবেদন', route: '/citizen-certificate-application' },
 ];
 
 export default function EServiceScreen() {
