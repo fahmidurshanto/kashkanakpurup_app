@@ -16,9 +16,9 @@ const { width: screenWidth } = Dimensions.get('window');
 const CAROUSEL_HEIGHT = 160;
 
 const SLIDES = [
-  { id: '1', image: require('@/assets/images/slide1.png') },
-  { id: '2', image: require('@/assets/images/slide2.png') },
-  { id: '3', image: require('@/assets/images/slide3.png') },
+  { id: '1', image: require('@/assets/images/slide1.jpg') },
+  { id: '2', image: require('@/assets/images/slide2.jpg') },
+  { id: '3', image: require('@/assets/images/slide3.jpg') },
 ];
 
 export function Carousel() {
