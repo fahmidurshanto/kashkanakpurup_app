@@ -1,20 +1,30 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useRouter } from 'expo-router';
 
 interface ServiceItem {
   icon: React.ComponentProps<typeof MaterialIcons>['name'];
   label: string;
+  route?: string;
 }
 
 const SERVICES: ServiceItem[] = [
-  { icon: 'home', label: 'হোল্ডিং আবেদন' },
+  { icon: 'home', label: 'হোল্ডিং আবেদন', route: '/holding-application' },
   { icon: 'groups', label: 'ওয়ারিশ সনদ আবেদন' },
   { icon: 'brightness-7', label: 'ট্রেড লাইসেন্স আবেদন' },
   { icon: 'brightness-5', label: 'নাগরিক সনদপত্র আবেদন' },
 ];
 
 export default function EServiceScreen() {
+  const router = useRouter();
+
+  const handleServicePress = (service: ServiceItem) => {
+    if (service.route) {
+      router.push(service.route as any);
+    }
+  };
+
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.contentContainer}>
       {/* Section Header */}
@@ -26,7 +36,12 @@ export default function EServiceScreen() {
       {/* Service Grid */}
       <View style={styles.serviceGrid}>
         {SERVICES.map((service, index) => (
-          <TouchableOpacity key={index} style={styles.serviceItem} activeOpacity={0.6}>
+          <TouchableOpacity
+            key={index}
+            style={styles.serviceItem}
+            activeOpacity={0.6}
+            onPress={() => handleServicePress(service)}
+          >
             <MaterialIcons name={service.icon} size={42} color="#2e7d32" />
             <Text style={styles.serviceLabel}>{service.label}</Text>
           </TouchableOpacity>
